@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+
   
     const form = document.querySelector('#new-item-form');
     form.addEventListener('submit', handleFormSubmit);
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const handleFormSubmit = function (event) {
   
-    // stops the post request
+    // Stops the post request from completing so results can be viewed
     event.preventDefault();
   
     const owner = event.target.owner.value
@@ -28,27 +30,29 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const newListItem = document.createElement('li');
   
-    // Title
+    // Owner
     const newOwnerItem = document.createElement('h2');
     newOwnerItem.textContent = `Owner: ${owner}`;
     newListItem.appendChild(newOwnerItem);
   
-    // Author
+    // Model
     const newModelItem = document.createElement('h3');
     newModelItem.textContent = `Model: ${model}`;
     newListItem.appendChild(newModelItem);
   
-    // Category
+    // Instrument Type
   
     const newInstrumentType = document.createElement('h4');
     newInstrumentType.textContent = `Instrument Type: ${type}`;
     newListItem.appendChild(newInstrumentType);
   
-  
+    // Selects the instrument list to the be appended
     const instrumentList = document.querySelector("#instrument-list");
   
-  
+    // Append the full list of owner, model and instrument to the instrument list
     instrumentList.appendChild(newListItem);
+
+    // Resets the form
     event.target.reset();
   };
   
