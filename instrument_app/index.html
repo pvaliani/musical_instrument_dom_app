@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Instrument Tracker App</title>
+    <h1 id="header">Gear Tracker. 🎸 </h1>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="js/app.js"></script>
   </head>
@@ -10,17 +11,17 @@
     <form id="new-item-form">
       <div id="form-wrapper">
         <div class="form-item">
-          <label for="owner" class="primary">Owner</label>
+          <label for="owner" class="owner"> Instrument Owner:</label>
           <input type="text" id="owner" required/>
         </div>
 
         <div class="form-item">
-          <label for="model" class="primary">Model</label>
+          <label for="model" class="model"> Instrument Model:</label>
           <input type="text" id="model" required/>
         </div>
 
         <div class="form-item">
-          <label for="type" class="primary">Instrument Type</label>
+          <label for="type" class="type">Instrument Type:</label>
           <select id="type">
             <option value="" disabled selected></option>
             <option value="Guitar">Guitar</option>
@@ -29,10 +30,10 @@
           </select>
         </div>
       </div>
-      <input type="submit" value="save"/>
+      <input type="submit" value="save" class="global-button"/>
+      <ul id="instrument-list"></ul>
     </form>
 
-    <h1>Instrument Tracker App</h1>
-    <ul id="instrument-list"></ul>
+
   </body>
 </html>

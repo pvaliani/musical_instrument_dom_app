@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 
   
     const newListItem = document.createElement('li');
+    newListItem.id = "results";
   
     // Owner
     const newOwnerItem = document.createElement('h2');
